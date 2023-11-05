@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="Anchor" prefHeight="623.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <TableView fx:id="tablavis" layoutX="15.0" layoutY="269.0" prefHeight="332.0" prefWidth="519.0">
+        <columns>
+          <TableColumn fx:id="IdProducto" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="NombreProducto" minWidth="90.0" prefWidth="110.0" text="Nombre Producto" />
+            <TableColumn fx:id="FechaLote" minWidth="90.0" prefWidth="75.0" text="Fecha de Lote" />
+            <TableColumn fx:id="FechadeVencimiento" prefWidth="150.0" text="Fecha de Vencimiento" />
+            <TableColumn fx:id="PrecioUnitario" prefWidth="100.0" text="Precio" />
+        </columns>
+      </TableView>
+      <TextArea layoutX="17.0" layoutY="53.0" prefHeight="182.0" prefWidth="721.0" style="-fx-background-color: 5321231;" />
+      <Label layoutX="27.0" layoutY="36.0" text="DATOS DEL PRODUCTO" />
+      <Button fx:id="BotonR" layoutX="377.0" layoutY="185.0" mnemonicParsing="false" onAction="#Registrar" text="REGISTRAR" />
+      <Button layoutX="612.0" layoutY="298.0" mnemonicParsing="false" text="PROMEDIO" />
+      <Button fx:id="botonLim" layoutX="482.0" layoutY="185.0" mnemonicParsing="false" onAction="#limpiarTabla" text="LIMPIAR" />
+      <TextArea layoutX="551.0" layoutY="273.0" prefHeight="325.0" prefWidth="200.0" />
+      <TextField fx:id="IdProductoTextField" layoutX="125.0" layoutY="73.0" />
+      <TextField fx:id="NombreProductoTextField" layoutX="422.0" layoutY="73.0" />
+      <Label layoutX="26.0" layoutY="68.0" text="ID Producto" />
+      <Label layoutX="308.0" layoutY="77.0" text="Nombre Producto" />
+      <Label layoutX="30.0" layoutY="127.0" text="Fecha de Lote" />
+      <Label layoutX="308.0" layoutY="128.0" text="Fecha deVencimiento" />
+      <TextField fx:id="PrecioUnitarioTextField" layoutX="125.0" layoutY="185.0" />
+      <Label layoutX="39.0" layoutY="189.0" text="Precio" />
+      <DatePicker fx:id="FechaLoteDate" layoutX="112.0" layoutY="124.0" />
+      <DatePicker fx:id="FechadeVencimientoDate" layoutX="438.0" layoutY="123.0" />
+      <Button fx:id="botonp" layoutX="620.0" layoutY="410.0" mnemonicParsing="false" onAction="#promedio" text="PROMEDIO" />
+      <Button fx:id="maboton" layoutX="608.0" layoutY="298.0" mnemonicParsing="false" onAction="#mayorp" text="Mayor Precio" />
+      <Button fx:id="meboton" layoutX="607.0" layoutY="334.0" mnemonicParsing="false" onAction="#menorpr" text="Menor Precio" />
+      <Button fx:id="mayboton" layoutX="606.0" layoutY="493.0" mnemonicParsing="false" onAction="#mayorpro" text="Mayor Promedio" />
+      <Button fx:id="menboton" layoutX="605.0" layoutY="546.0" mnemonicParsing="false" onAction="#Mepromedio" text="Menor Promedio" />
+      <Separator layoutX="551.0" layoutY="378.0" prefWidth="200.0" />
+      <Separator layoutX="551.0" layoutY="465.0" prefWidth="200.0" />
+      <MenuBar fx:id="menu" layoutY="2.0" prefHeight="25.0" prefWidth="762.0">
+        <menus>
+          <Menu fx:id="buscar" mnemonicParsing="false" text="Buscar">
+            <items>
+              <MenuItem fx:id="idp" mnemonicParsing="false" onAction="#Action" text="IdProducto" />
+                  <MenuItem fx:id="npb" mnemonicParsing="false" onAction="#Action1" text="NombreProducto" />
+                  <MenuItem fx:id="flb" mnemonicParsing="false" onAction="#Action2" text="FechaLote" />
+                  <MenuItem fx:id="fvb" mnemonicParsing="false" onAction="#Action3" text="FechadeVencimiento" />
+                  <MenuItem fx:id="pub" mnemonicParsing="false" onAction="#Action4" text="PrecioUnitario" />
+            </items>
+          </Menu>
+          <Menu fx:id="listar" mnemonicParsing="false" text="Listar">
+            <items>
+                  <MenuItem fx:id="fechalote" mnemonicParsing="false" onAction="#ProductosMesLote" text="MesfechaLote" />
+              <MenuItem fx:id="fechavencimiento" mnemonicParsing="false" onAction="#ProductosMesVencimiento" text="MesfechaVencimiento" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="559.0" layoutY="468.0" text="Rango de Promedio" />
+      <Label layoutX="559.0" layoutY="273.0" text="Rango de Precios" />
+      <Label layoutX="559.0" layoutY="381.0" text="Promedio" />
+      <Button fx:id="cerrarboton" layoutX="579.0" layoutY="185.0" mnemonicParsing="false" onAction="#cerrar" text="CERRAR" />
+    </children>
+</AnchorPane>
